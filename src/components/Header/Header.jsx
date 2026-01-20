@@ -39,7 +39,7 @@ function Header(){
           return (
                     <header>
                               <Container>
-                                        <nav className='flex'>
+                                        <nav className='flex flex-row justify-center p-2 items-center bg-gray-500'>
                                                   <div>
                                                        <Link to='/'>
                                                            <Logo width='70px' />
@@ -50,7 +50,7 @@ function Header(){
                                                                       item.active ? (//jo element repeat hota h uspe hm key lgaate hain, slug me url hai aur navigate ki jgh hm Link bhi use kr skte the
                                                                                 <li key={item.name}>
                                                                                     <button
-                                                                                          className='inline-block px-6 py-2 duration-200 hover:bg-blue-200 rounded-full'
+                                                                                          className='inline-block px-6 py-2 duration-200 hover:bg-blue-200 rounded-full font-semibold'
                                                                                           onClick={() => navigate(item.slug)}>{item.name}</button>
                                                                                 </li>
                                                                       ) : null
