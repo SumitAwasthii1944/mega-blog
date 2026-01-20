@@ -1,5 +1,6 @@
 import conf from '../conf/config.js';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
+import { Permission,Role } from "appwrite";
 
 export class Service{
     client = new Client();
@@ -104,6 +105,10 @@ export class Service{
                 conf.appwriteBucketId,
                 ID.unique(),
                 file
+                [
+                    Permission.read(Role.any()),   // 👈 THIS FIXES 403
+                    Permission.write(Role.user())
+                ]
             )
         } catch (error) {
             console.log("Appwrite serive :: uploadFile :: error", error);
