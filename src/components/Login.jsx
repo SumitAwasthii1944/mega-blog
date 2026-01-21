@@ -28,7 +28,7 @@ function Login() {
 
   return (
     <div
-    className='w-full flex items-center justify-center my-6'
+    className='w-full flex items-center justify-center my-6 px-4'
     >
         <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
         <div className="mb-2 flex justify-center">
